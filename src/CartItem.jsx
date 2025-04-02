@@ -7,6 +7,7 @@ const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
+  // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
     console.log("calculatTotalAmount");
     var cartTotal = 0;
@@ -21,6 +22,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleContinueShopping = (e) => {
     onContinueShopping();
+   //call onContinueShopping(e) function passed from the parent component
   };
 
 
@@ -39,6 +41,7 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(removeItem(itemName));
   };
 
+  // Calculate total cost based on quantity for an item
   const calculateTotalCost = (item) => {
        const quantity = item.quantity;
         const cost = parseFloat(item.cost.substring(1))
@@ -82,3 +85,4 @@ const CartItem = ({ onContinueShopping }) => {
 };
 
 export default CartItem;
+
