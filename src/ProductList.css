@@ -250,3 +250,49 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.plant-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease;
+}
+
+.plant-card:hover {
+    transform: scale(1.02);
+}
+
+.plant-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.plant-cost {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
